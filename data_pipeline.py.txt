@@ -1,0 +1,20 @@
+# data_pipeline.py
+import pandas as pd
+
+# Simulate reading data from a source (e.g., CSV file)
+data = {
+    "Name": ["Alice", "Bob", "Charlie"],
+    "Age": [25, 30, 35],
+    "City": ["New York", "Los Angeles", "Chicago"]
+}
+
+# Convert data to a DataFrame
+df = pd.DataFrame(data)
+
+# Perform a simple transformation (e.g., add a new column)
+df["Age_Next_Year"] = df["Age"] + 1
+
+# Save the processed data to a new CSV file
+df.to_csv("processed_data.csv", index=False)
+
+print("Data pipeline executed successfully! Processed data saved to 'processed_data.csv'.")
